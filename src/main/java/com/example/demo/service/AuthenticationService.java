@@ -23,7 +23,7 @@ public class AuthenticationService {
 
     public AuthenticationResponse register(RegisterRequest request) {
         if(repository.findByEmail(request.getEmail()).isPresent()) {
-            throw new IllegalArgumentException("User with this email already exists");
+            throw new IllegalArgumentException("Já existe um usuário cadastrado com este e-mail.");
         }
         var user = User.builder()
                 .name(request.getName())

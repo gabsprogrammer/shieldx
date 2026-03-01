@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="docs/shieldx_banner.png" alt="ShieldX API Banner" width="100%"/>
+  <img src="docs/shieldx_banner.png" alt="Banner da API ShieldX" width="100%"/>
 
-  <h1>ShieldX API</h1>
-  <p>Advanced JWT Security & Authentication Service</p>
+  <h1>API ShieldX</h1>
+  <p>Serviço Avançado de Autenticação e Segurança com JWT</p>
 
   <p>
     <a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/Spring_Boot-3.4.1-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot"></a>
@@ -11,61 +11,61 @@
   </p>
 </div>
 
-## 📌 Overview
+## 📌 Visão Geral
 
-**ShieldX** is a highly secure, enterprise-grade authentication and authorization API built with **Spring Boot 3** and **Spring Security**. It implements robust **JSON Web Token (JWT)** stateless authentication, demonstrating clean architecture, solid design principles, and modern security practices.
+O **ShieldX** é uma API de autenticação e autorização de nível empresarial, construída com **Spring Boot 3** e **Spring Security**. Ele implementa autenticação *stateless* (sem estado) robusta usando **JSON Web Token (JWT)**, demonstrando arquitetura limpa, princípios sólidos de design e práticas modernas de segurança.
 
-Developed as a showcase of backend engineering capabilities, ShieldX is designed to be a plug-and-play microservice for user identity management.
+Desenvolvido como uma vitrine de habilidades em engenharia de backend, o ShieldX foi projetado para ser um microsserviço *plug-and-play* para gerenciamento de identidade de usuários.
 
-## 🚀 Key Features
+## 🚀 Principais Funcionalidades
 
-- **Stateless Authentication:** Fully implemented JWT-based security filter chain.
-- **Role-Based Access Control (RBAC):** Distinct `USER` and `ADMIN` roles.
-- **Secure Password Storage:** Utilizing BCrypt hashing algorithm.
-- **Clean Architecture:** Separation of concerns using Controller, Service, and Repository layers.
-- **In-Memory Database:** H2 Database configured for instant setup and testing.
-- **Lombok Integration:** Minimal boilerplate code.
+- **Autenticação Stateless:** Cadeia de filtros de segurança baseada em JWT totalmente implementada.
+- **Controle de Acesso Baseado em Cargos (RBAC):** Funções distintas de `USER` (Usuário) e `ADMIN` (Administrador).
+- **Armazenamento Seguro de Senhas:** Utilizando o algoritmo de hash BCrypt.
+- **Arquitetura Limpa (Clean Architecture):** Separação clara de responsabilidades nas camadas Controller, Service e Repository.
+- **Banco de Dados em Memória:** Banco de dados H2 configurado para uso e testes imediatos.
+- **Integração com Lombok:** Código mais limpo e sem redundâncias (boilerplate).
 
-## 📂 Architecture & Flow
+## 📂 Arquitetura e Fluxo
 
-1. **User Registration:** Endpoint to create a new user account. Passwords are encrypted before persisting to the DB.
-2. **User Login:** Authenticates credentials and issues a signed JWT valid for 24 hours.
-3. **Secure Resource Access:** The `JwtAuthenticationFilter` intercepts requests to protected endpoints, validates the token signature, and sets the Security Context.
+1. **Registro de Usuário:** Endpoint para criar uma nova conta. As senhas são criptografadas antes de serem salvas no banco de dados.
+2. **Login de Usuário:** Autentica as credenciais e emite um JWT assinado, válido por 24 horas.
+3. **Acesso Seguro a Recursos:** O `JwtAuthenticationFilter` intercepta requisições para endpoints protegidos, valida a assinatura do token e configura o Contexto de Segurança.
 
-## 🛠️ Tech Stack
+## 🛠️ Tecnologias Utilizadas
 
 - **Framework:** Spring Boot 3.4
-- **Security:** Spring Security 6, JJWT (Java JWT)
-- **Data Access:** Spring Data JPA, Hibernate
-- **Database:** H2 Database Engine
-- **Build Tool:** Gradle
+- **Segurança:** Spring Security 6, JJWT (Java JWT)
+- **Acesso a Dados:** Spring Data JPA, Hibernate
+- **Banco de Dados:** H2 Database Engine
+- **Ferramenta de Build:** Gradle
 
-## ⚙️ How to Run
+## ⚙️ Como Executar
 
-1. Clone the repository
+1. Clone o repositório
    ```bash
    git clone https://github.com/gabsprogrammer/shieldx.git
    ```
-2. Navigate to the project directory
+2. Acesse a pasta do projeto
    ```bash
    cd shieldx
    ```
-3. Run the application
+3. Rode a aplicação
    ```bash
    ./gradlew bootRun
    ```
-4. The API will be available at `http://localhost:8080`
+4. A API estará disponível em `http://localhost:8080`
 
-## 📡 API Endpoints
+## 📡 Endpoints da API
 
-### Authentication
-- `POST /api/v1/auth/register` - Register a new user
-- `POST /api/v1/auth/authenticate` - Login and receive a JWT
+### Autenticação
+- `POST /api/v1/auth/register` - Registrar um novo usuário
+- `POST /api/v1/auth/authenticate` - Fazer login e receber um JWT
 
-### Protected Resources
-- `GET /api/v1/secure` - Example endpoint requiring a valid Bearer Token in the `Authorization` header.
+### Recursos Protegidos
+- `GET /api/v1/secure` - Endpoint de exemplo que exige um Bearer Token válido no cabeçalho `Authorization`.
 
-## 👨‍💻 Author
+## 👨‍💻 Autor
 
 **Gabriel Santana**  
-Fullstack Developer | [GitHub](https://github.com/gabsprogrammer) | [LinkedIn](https://linkedin.com)
+Desenvolvedor Fullstack | [GitHub](https://github.com/gabsprogrammer) | [LinkedIn](https://linkedin.com)

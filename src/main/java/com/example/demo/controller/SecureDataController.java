@@ -12,6 +12,6 @@ public class SecureDataController {
 
     @GetMapping
     public ResponseEntity<String> getSecureData(Principal principal) {
-        return ResponseEntity.ok("Hello " + principal.getName() + "! You have successfully accessed a secure endpoint protected by our JWT Security Filter.");
+        return ResponseEntity.ok("Olá " + principal.getName() + "! Você acessou com sucesso um endpoint seguro protegido pelo nosso Filtro de Segurança JWT.");
     }
 }
